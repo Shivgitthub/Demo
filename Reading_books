@@ -1,0 +1,4 @@
+Reading Bookings are good habit
+branch = pd.merge(left=sd[['hospital_id','hospital_name']],right=hs_b,how='inner',left_on=sd['hospital_name'],right_on=hs_b['businessname']).drop(['key_0','hospital_name','businessname'],axis=1)
+
+branch.insert(loc=0,column='branch_id',value=[1500+i for i in range(len(branch))])
